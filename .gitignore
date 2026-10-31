@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.so
+*.o
+*.egg-info/
+build/
+dist/
+*.qdstrm
+*.nsys-rep
+experiments/*/trace.json
+.env

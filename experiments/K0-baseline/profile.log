@@ -1,0 +1,37 @@
+WARNING: CPU IP/backtrace sampling not supported, disabling.
+Try the 'nsys status --environment' command to learn more.
+
+WARNING: CPU context switch tracing not supported, disabling.
+Try the 'nsys status --environment' command to learn more.
+
+The image processor of type `Qwen2VLImageProcessor` is now loaded as a fast processor by default, even if the model checkpoint was saved with a slow processor. This is a breaking change and may produce slightly different outputs. To continue using the slow processor, instantiate this class with `use_fast=False`. Note that this behavior will be extended to all models in a future release.
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/firania/anaconda3/envs/mozart/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Loading Qwen/Qwen2.5-VL-3B-Instruct-AWQ...
+Running profiled generation...
+Output tokens: 137
+Describe the contents of this document in detail. The document is a report on the impact of climate change on the world's oceans.
+The report discusses the effects of rising temperatures, acidification, and sea level rise on the world's oceans. It also examines the impacts of these changes on marine life, including fish, coral reefs, and other species. The report highlights the importance of taking action to mitigate the effects of climate change on the oceans, as well as the potential consequences of continued inaction. The report concludes with recommendations for how to address the challenges facing the world's oceans. The report is written by a team of experts from various fields, including oceanography, biology, and
+The target application terminated. One or more process it created re-parented.
+Waiting for termination of re-parented processes.
+Use the `--wait` option to modify this behavior.
+Importer error status: The importer binary and its dependencies were not found.
+Unable to retrieve the importer version: skipping importation of the QDSTRM file.
+Generating '/tmp/nsys-report-9117.qdstrm'
+Generated:
+    /home/firania/Downloads/kernel-lab-sm89/experiments/K0-baseline/baseline.qdstrm

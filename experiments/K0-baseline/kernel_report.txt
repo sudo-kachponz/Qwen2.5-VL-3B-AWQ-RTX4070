@@ -1,0 +1,36 @@
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                     WQLinearMMFunction        30.37%        1.675s        45.33%        2.499s      77.477us        1.569s        67.71%        1.619s      50.193us         32256  
+                                        awq_gemm_kernel         0.00%       0.000us         0.00%       0.000us       0.000us        1.569s        67.71%        1.569s      48.647us         32256  
+                                           aten::matmul         0.04%       2.160ms         0.31%      16.862ms      65.868us       0.000us         0.00%     318.102ms       1.243ms           256  
+                                           aten::linear         0.01%     464.366us         0.17%       9.171ms      71.646us       0.000us         0.00%     317.910ms       2.484ms           128  
+                                               aten::mm         0.10%       5.395ms         0.12%       6.435ms      50.274us     317.910ms        13.72%     317.910ms       2.484ms           128  
+std::enable_if<!(false), void>::type internal::gemvx...         0.00%       0.000us         0.00%       0.000us       0.000us     317.910ms        13.72%     317.910ms       2.484ms           128  
+                                              aten::cat         4.13%     227.853ms         6.08%     335.407ms      11.911us      69.440ms         3.00%      69.440ms       2.466us         28160  
+                                              aten::mul         4.94%     272.610ms         7.36%     405.637ms       9.574us      68.429ms         2.95%      68.429ms       1.615us         42368  
+                                              aten::add         4.79%     263.890ms         7.23%     398.736ms       9.469us      51.311ms         2.21%      51.311ms       1.218us         42111  
+                                            aten::copy_         1.73%      95.409ms         3.27%     180.430ms       8.724us      48.852ms         2.11%      48.852ms       2.362us         20683  
+                                               aten::to         0.48%      26.579ms         6.06%     334.242ms       5.388us       0.000us         0.00%      46.845ms       0.755us         62031  
+                                         aten::_to_copy         1.17%      64.267ms         5.58%     307.662ms      15.856us       0.000us         0.00%      46.845ms       2.414us         19403  
+                     aten::scaled_dot_product_attention         0.89%      48.870ms         6.92%     381.291ms      82.745us       0.000us         0.00%      43.908ms       9.529us          4608  
+              aten::_scaled_dot_product_flash_attention         0.70%      38.512ms         6.03%     332.421ms      72.140us       0.000us         0.00%      43.908ms       9.529us          4608  
+                         aten::_flash_attention_forward         1.83%     100.821ms         4.77%     262.826ms      57.037us      43.908ms         1.89%      43.908ms       9.529us          4608  
+void pytorch_flash::flash_fwd_kernel<pytorch_flash::...         0.00%       0.000us         0.00%       0.000us       0.000us      40.584ms         1.75%      40.584ms       9.473us          4284  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      39.133ms         1.69%      39.133ms       1.220us         32076  
+void at::native::elementwise_kernel<128, 4, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us      35.044ms         1.51%      35.044ms       1.894us         18505  
+                                            aten::fill_         1.96%     108.015ms         4.28%     235.857ms       7.169us      32.348ms         1.40%      32.348ms       0.983us         32899  
+                                            aten::zeros         1.08%      59.478ms         8.71%     480.413ms      14.894us       0.000us         0.00%      31.714ms       0.983us         32256  
+                                            aten::zero_         1.17%      64.601ms         5.34%     294.291ms       9.124us       0.000us         0.00%      31.714ms       0.983us         32256  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us      31.714ms         1.37%      31.714ms       0.983us         32256  
+                                             aten::mean         1.80%      99.366ms         2.37%     130.626ms      13.980us      26.746ms         1.15%      26.746ms       2.862us          9344  
+void at::native::reduce_kernel<512, 1, at::native::R...         0.00%       0.000us         0.00%       0.000us       0.000us      26.746ms         1.15%      26.746ms       2.862us          9344  
+void at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      23.585ms         1.02%      23.585ms       2.457us          9600  
+void at::native::(anonymous namespace)::CatArrayBatc...         0.00%       0.000us         0.00%       0.000us       0.000us      23.278ms         1.00%      23.278ms       2.506us          9288  
+void at::native::(anonymous namespace)::CatArrayBatc...         0.00%       0.000us         0.00%       0.000us       0.000us      23.266ms         1.00%      23.266ms       2.544us          9144  
+void at::native::unrolled_elementwise_kernel<at::nat...         0.00%       0.000us         0.00%       0.000us       0.000us      23.038ms         0.99%      23.038ms       2.400us          9600  
+void at::native::(anonymous namespace)::CatArrayBatc...         0.00%       0.000us         0.00%       0.000us       0.000us      21.682ms         0.94%      21.682ms       2.371us          9144  
+                                              aten::neg         1.11%      61.335ms         1.65%      90.816ms       9.854us      17.167ms         0.74%      17.167ms       1.863us          9216  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 5.513s
+Self CUDA time total: 2.317s
